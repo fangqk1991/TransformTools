@@ -39,3 +39,15 @@ for file in ${files}; do
 
     echo "${buildDir}/${filename}.app"
 done
+
+php "${__DIR__}/generate.php"
+
+file="${buildDir}/transform-tools.sh"
+filename=`basename "${file%.*}"`
+DIR="${buildDir}/${filename}.app/Contents/MacOS"
+mkdir -p "${DIR}"
+cp "${file}" "${DIR}/${filename}"
+chmod +x "${targetFile}"
+echo "${buildDir}/${filename}.app"
+
+
