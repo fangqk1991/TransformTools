@@ -1,7 +1,4 @@
-#!/bin/bash
-
-pbpaste \
-| sed '{
+echo "$1" | sed '{
     /^[[:space:]]*$/d
 }' \
 | sed -n '{
@@ -18,7 +15,4 @@ pbpaste \
         s/[[:space:]]*;/;/
         p
     }
-}' \
-| pbcopy
-
-pbpaste
+}'
