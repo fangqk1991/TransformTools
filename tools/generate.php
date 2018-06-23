@@ -47,7 +47,5 @@ $content = preg_replace_callback(
     $tmpl
 );
 
-$buildFile = sprintf('%s/../build/transform-tools.sh', __DIR__);
-file_put_contents($buildFile, $content);
-chmod($buildFile, 0755);
+echo $content;
 
