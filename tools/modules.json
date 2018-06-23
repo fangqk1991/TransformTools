@@ -22,5 +22,9 @@
     {
         "file_name": "sql-rows-to-php-array",
         "description": "sql-rows-to-php-array"
+    },
+    {
+        "file_name": "name-to-small-camel",
+        "description": "name-to-small-camel"
     }
 ]

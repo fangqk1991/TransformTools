@@ -8,7 +8,8 @@ fi
 
 __DIR__=`cd "$(dirname "${__FILE__}")"; pwd`
 
-moduleName='sql-rows-to-php-array'
+# moduleName='sql-rows-to-php-array'
+moduleName='name-to-small-camel'
 script="${__DIR__}/../modules/${moduleName}.sh"
 
 content=$(pbpaste)
