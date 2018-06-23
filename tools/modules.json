@@ -18,5 +18,9 @@
     {
         "file_name": "php-mapper-objc",
         "description": "php-mapper-objc"
+    },
+    {
+        "file_name": "sql-rows-to-php-array",
+        "description": "sql-rows-to-php-array"
     }
 ]
