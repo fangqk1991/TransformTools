@@ -44,10 +44,13 @@ php "${__DIR__}/generate.php"
 
 file="${buildDir}/transform-tools.sh"
 filename=`basename "${file%.*}"`
+
 DIR="${buildDir}/${filename}.app/Contents/MacOS"
+targetFile="${DIR}/${filename}"
 mkdir -p "${DIR}"
-cp "${file}" "${DIR}/${filename}"
+cp "${__DIR__}/app-delegate.tpl" "${targetFile}"
 chmod +x "${targetFile}"
+mv "${file}" "${DIR}/main.sh"
 echo "${buildDir}/${filename}.app"
 
 
