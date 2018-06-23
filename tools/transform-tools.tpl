@@ -22,5 +22,5 @@ echo '########## Result ##########'
 
 echo '########### EOF ##########'
 echo 'The result has copied to clipboard!'
-#read -n1 -p 'Press any key to continue...'
-#exit
+read -n1 -p 'Press any key to continue...'
+exit
