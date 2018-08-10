@@ -9,7 +9,7 @@ fi
 __DIR__=`cd "$(dirname "${__FILE__}")"; pwd`
 
 # moduleName='sql-rows-to-php-array'
-moduleName='name-to-small-camel'
+moduleName='futu-to-python-mapper'
 script="${__DIR__}/../modules/${moduleName}.sh"
 
 content=$(pbpaste)
