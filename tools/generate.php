@@ -14,12 +14,14 @@ for($i = 0; $i < $count; ++$i)
     $item = $items[$i];
     $fileName = $item['file_name'];
     $description = $item['description'];
-    array_push($hints, sprintf('echo "%d. %s"', $i, $description));
+
+    $index = $i + 1;
+    array_push($hints, sprintf('echo "%d. %s"', $index, $description));
 
     $code = sprintf('
     %d)
         func="%s"
-        ;;', $i, $fileName);
+        ;;', $index, $fileName);
     array_push($cases, $code);
 
     $shellFile = sprintf('%s/../modules/%s.sh', __DIR__, $fileName);
