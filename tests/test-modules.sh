@@ -8,6 +8,7 @@ fi
 
 __DIR__=`cd "$(dirname "${__FILE__}")"; pwd`
 
+module="$1"
 
 files=`find "${__DIR__}/../modules" -name "*.sh"`
 
@@ -15,6 +16,10 @@ for file in ${files}; do
 
     filename=`basename "${file%.*}"`
     datafile="${__DIR__}/${filename}.txt"
+
+    if [ ! -z "${module}" ] && [ "${module}" != "${filename}" ]; then
+        continue
+    fi
 
     if [ ! -f "${datafile}" ]; then
         echo "${filename} test fail. The test data missing.."
