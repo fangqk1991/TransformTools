@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PATH="/usr/local/bin:$PATH"
+
 ###### fc_input start ######
 fc_input="$1"
 ###### fc_input end ######
