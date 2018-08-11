@@ -24,12 +24,11 @@ for($i = 0; $i < $count; ++$i)
         ;;', $index, $fileName);
     array_push($cases, $code);
 
-    $shellFile = sprintf('%s/../modules/%s.sh', __DIR__, $fileName);
     $func = sprintf('
 function %s() {
-%s | pbcopy
+"${__DIR__}/%s" "$1" | pbcopy
 pbpaste
-}', $fileName, trim(file_get_contents($shellFile)));
+}', $fileName, $fileName);
     array_push($functions, $func);
 }
 

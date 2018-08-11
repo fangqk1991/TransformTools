@@ -46,6 +46,13 @@ mainFile="${DIR}/main.sh"
 targetFile="${DIR}/${filename}"
 
 mkdir -p "${DIR}"
+
+for file in ${files}; do
+    filename=`basename "${file%.*}"`
+    cp "${file}" "${DIR}/${filename}"
+    chmod +x "${DIR}/${filename}"
+done
+
 php "${__DIR__}/generate.php" > "${mainFile}"
 cp "${__DIR__}/app-delegate.tpl" "${targetFile}"
 chmod +x "${targetFile}" "${mainFile}"
