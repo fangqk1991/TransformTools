@@ -1,0 +1,6 @@
+'rid',
+'uid',
+'content',
+'response_type',
+'target_id',
+'create_time',

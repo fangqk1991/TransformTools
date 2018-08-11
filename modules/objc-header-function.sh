@@ -1,7 +1,12 @@
-echo "$1" | sed '{
+#!/bin/bash
+
+###### fc_input start ######
+fc_input="$1"
+###### fc_input end ######
+
+fc_output="$(echo "${fc_input}" | sed '{
     /^[[:space:]]*$/d
-}' \
-| sed -n '{
+}' | sed -n '{
     /^[[:space:]]*[+-][[:space:]]*([^{]*/{
         N
         :rep
@@ -15,4 +20,8 @@ echo "$1" | sed '{
         s/[[:space:]]*;/;/
         p
     }
-}'
+}')"
+
+###### fc_output start ######
+echo "${fc_output}"
+###### fc_output end ######

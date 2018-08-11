@@ -1,0 +1,10 @@
+
+            'uid' => 'uid',
+            'name' => 'name',
+            'description' => 'description',
+            'imageURL' => 'image_url',
+            'type' => 'type',
+            'auditLevel' => 'audit_level',
+            'privacyLevel' => 'privacy_level',
+            'locked' => 'locked',
+            'createTime' => 'create_time',

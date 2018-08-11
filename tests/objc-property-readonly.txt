@@ -1,0 +1,26 @@
+//
+//  Channel.m
+//  FC.Client
+//
+//  Created by fang on 2018/6/19.
+//  Copyright © 2018 fangcha. All rights reserved.
+//
+
+#import "Channel.h"
+
+@interface Channel()
+
+@property (nonatomic, copy, readwrite) NSString *uid;
+@property (nonatomic, copy, readwrite) NSString *name;
+@property (nonatomic, copy, readwrite) NSString *detail;
+@property (nonatomic, copy, readwrite) NSString *imageURL;
+@property (nonatomic, readwrite) ChannelType type;
+@property (nonatomic, readwrite) AuditLevel auditLevel;
+@property (nonatomic, readwrite) PrivacyLevel privacyLevel;
+
+@end
+
+
+@implementation Channel
+
+@end

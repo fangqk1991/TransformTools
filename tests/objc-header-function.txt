@@ -1,0 +1,72 @@
+@implementation Channel
+
+- (instancetype)init
+{
+    if(self = [super init])
+    {
+    }
+    return self;
+}
+
++ (NSDictionary *)fc_propertyMapper
+{
+    NSMutableDictionary *dic = [[super fc_propertyMapper] mutableCopy];
+
+    [dic addEntriesFromDictionary:@{
+            @"uid": @"uid",
+            @"name": @"name",
+            @"detail": @"description",
+            @"imageURL": @"image_url",
+            @"type": @"type",
+            @"auditLevel": @"audit_level",
+            @"privacyLevel": @"privacy_level",
+    }];
+    return dic;
+}
+
+- (BOOL)fc_isValid
+{
+    if(!_uid || !_name || !_imageURL)
+    {
+        return NO;
+    }
+
+    return YES;
+}
+
+#pragma mark - FCSQLProtocol
+
+- (NSString *)sql_table
+{
+    return @"channel";
+}
+
+- (NSArray *)sql_cols
+{
+    return @[
+             @"uid",
+             @"name",
+             @"description",
+             @"image_url",
+             @"type",
+             @"audit_level",
+             @"privacy_level",
+             ];
+}
+
+- (NSArray *)sql_insertableCols
+{
+    return [self sql_cols];
+}
+
+- (NSArray *)sql_modifiableCols
+{
+    return @[];
+}
+
+- (id)sql_primaryKey
+{
+    return @"uid";
+}
+
+@end
