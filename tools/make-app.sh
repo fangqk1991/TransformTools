@@ -28,12 +28,12 @@ for file in ${files}; do
 
     targetFile="${DIR}/${filename}"
 
-    sed '/^$/d' "${file}" \
-    | sed '{
-        1s/echo "$1"/pbpaste/
-        1i\#!/bin/bash
-        $s/^\(.*\)$/\1 | pbcopy/
-    }'> "${targetFile}"
+    sed '{
+        /fc_input start/i\fc_input="$(pbpaste)"
+        /fc_input start/,/fc_input end/d
+        /fc_output start/i\echo "\${fc_output}" | pbcopy
+        /fc_output start/,/fc_output end/d
+    }' "${file}" > "${targetFile}"
 
     chmod +x "${targetFile}"
 

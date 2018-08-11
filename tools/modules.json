@@ -26,5 +26,9 @@
     {
         "file_name": "name-to-small-camel",
         "description": "name-to-small-camel"
+    },
+    {
+        "file_name": "futu-to-python-mapper",
+        "description": "futu-to-python-mapper"
     }
 ]
