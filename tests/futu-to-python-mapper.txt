@@ -1,0 +1,11 @@
+code    str 股票代码
+time_key    str 时间
+open    float   开盘价
+close   float   收盘价
+high    float   最高价
+low float   最低价
+volume  int 成交量
+turnover    float   成交额
+pe_ratio    float   市盈率
+turnover_rate   float   换手率
+last_close  float   昨收价

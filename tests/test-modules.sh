@@ -19,6 +19,12 @@ for file in ${files}; do
     if [ ! -f "${datafile}" ]; then
         echo "${filename} test fail. The test data missing.."
     else
-        cat "${datafile}" | "${file}"
+        echo "=== ${filename} ==="
+        content="$(cat "${datafile}")"
+        echo "====== input ======"
+        echo "${content}"
+        echo "====== output ======"
+        "${file}" "${content}"
+        echo "========================"
     fi 
 done
