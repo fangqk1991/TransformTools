@@ -28,7 +28,11 @@
         "description": "name-to-small-camel"
     },
     {
-        "file_name": "futu-to-python-feed",
-        "description": "futu-to-python-feed"
+        "file_name": "futu-to-python-mapper",
+        "description": "futu-to-python-mapper"
+    },
+    {
+        "file_name": "python-mapper-to-property",
+        "description": "python-mapper-to-property"
     }
 ]
