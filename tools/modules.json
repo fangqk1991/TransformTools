@@ -34,5 +34,9 @@
     {
         "file_name": "python-mapper-to-property",
         "description": "python-mapper-to-property"
+    },
+    {
+        "file_name": "null-to-none",
+        "description": "null-to-none"
     }
 ]

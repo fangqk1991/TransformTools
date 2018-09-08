@@ -40,10 +40,10 @@ for file in ${files}; do
     echo "${buildDir}/${filename}.app"
 done
 
-filename='transform-tools'
-DIR="${buildDir}/${filename}.app/Contents/MacOS"
+appname='transform-tools'
+DIR="${buildDir}/${appname}.app/Contents/MacOS"
 mainFile="${DIR}/main.sh"
-targetFile="${DIR}/${filename}"
+targetFile="${DIR}/${appname}"
 
 mkdir -p "${DIR}"
 
@@ -56,6 +56,6 @@ done
 php "${__DIR__}/generate.php" > "${mainFile}"
 cp "${__DIR__}/app-delegate.tpl" "${targetFile}"
 chmod +x "${targetFile}" "${mainFile}"
-echo "${buildDir}/${filename}.app"
+echo "${buildDir}/${appname}.app"
 
 
