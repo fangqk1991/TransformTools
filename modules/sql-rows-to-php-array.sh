@@ -7,7 +7,7 @@ fc_input="$1"
 ###### fc_input end ######
 
 fc_output="$(echo "${fc_input}" | sed -n '{
-    /^[[:space:]]*[a-z][a-z0-9_]*[[:space:]][[:space:]]*\(INT\|TINYINT\|CHAR\|VARCHAR\|DATE\).*$/p
+    /^[[:space:]]*[a-z][a-z0-9_]*[[:space:]][[:space:]]*\(INT\|TINYINT\|CHAR\|VARCHAR\|DATE\|FLOAT\).*$/p
 }' | sed '{
     s/^[[:space:]]*\([a-zA-Z0-9_]*\).*$/'\''\1'\'',/
 }')"
